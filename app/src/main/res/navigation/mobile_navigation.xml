@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/main_activity"
+        android:name="com.example.acc.MainActivity"
+        android:label="@string/main_label"
+        tools:layout="@layout/activity_main">
+        <action
+            android:id="@+id/action_main_to_second"
+            app:destination="@id/second_activity" />
+    </fragment>
+    <fragment
+        android:id="@+id/second_activity"
+        android:name="com.example.acc.SecondActivity"
+        android:label="@string/second_label"
+        tools:layout="@layout/activity_second">
+    </fragment>
+</navigation>
