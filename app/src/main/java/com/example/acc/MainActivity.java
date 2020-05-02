@@ -37,10 +37,18 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_second);
                 final TextView serviceNum = findViewById(R.id.service_number);
                 final TextView serviceUser = findViewById(R.id.service_sentence);
+                final TextView glummer = findViewById((R.id.gotnumber));
+                final Button restart = findViewById(R.id.restart);
                 userName[0] = nameInput.getText().toString().trim();
                 randomNumber[0] = number.nextInt(6) + 1;
-                serviceUser.setText(userName[0] + " got number " );
+                serviceUser.setText(userName[0]);
                 serviceNum.setText(String.valueOf(randomNumber[0]));
+                restart.setOnClickListener(new Button.OnClickListener() {
+                    @SuppressLint("SetTextI18n")
+                    public void onClick(View v) {
+                        setContentView(R.layout.activity_main);
+                    }
+                });
 
             }
         });

@@ -5,7 +5,7 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
-    <fragment
+    <activity
         android:id="@+id/main_activity"
         android:name="com.example.acc.MainActivity"
         android:label="@string/main_label"
@@ -13,11 +13,14 @@
         <action
             android:id="@+id/action_main_to_second"
             app:destination="@id/second_activity" />
-    </fragment>
-    <fragment
+    </activity>
+    <activity
         android:id="@+id/second_activity"
         android:name="com.example.acc.SecondActivity"
         android:label="@string/second_label"
         tools:layout="@layout/activity_second">
-    </fragment>
+        <action
+            android:id="@+id/action_second_to_main"
+            app:destination="@id/main_activity" />
+    </activity>
 </navigation>
