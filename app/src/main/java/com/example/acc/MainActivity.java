@@ -1,14 +1,13 @@
 package com.example.acc;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
@@ -23,21 +22,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //user
-        final TextView serviceOutput = (TextView) findViewById(R.id.service_output);
-        final EditText nameInput = (EditText) findViewById(R.id.name_input);
+        final TextView serviceOutput = findViewById(R.id.service_output);
+        final EditText nameInput = findViewById(R.id.name_input);
 
         //button
-        Button random = (Button) findViewById(R.id.random);
-        Button start = (Button) findViewById(R.id.start);
-        Button stop = (Button) findViewById(R.id.stop);
+        Button random = findViewById(R.id.random);
+        Button start =  findViewById(R.id.start);
+        Button stop =  findViewById(R.id.stop);
 
         //event
         random.setOnClickListener(new Button.OnClickListener() {
             @SuppressLint("SetTextI18n")
             public void onClick(View v) {
                 setContentView(R.layout.activity_second);
-                final TextView serviceNum = (TextView) findViewById(R.id.service_sentence);
-                final TextView serviceUser = (TextView) findViewById(R.id.service_number);
+                final TextView serviceNum = findViewById(R.id.service_number);
+                final TextView serviceUser = findViewById(R.id.service_sentence);
                 userName[0] = nameInput.getText().toString().trim();
                 randomNumber[0] = number.nextInt(6) + 1;
                 serviceUser.setText(userName[0] + " got number " );
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 if (userName[0].length() == 0)
                     serviceOutput.setText("");
                 else
-                    serviceOutput.setText(userName[0] + " got number " + String.valueOf(randomNumber[0]));
+                    serviceOutput.setText(userName[0] + " got number " + randomNumber[0]);
             }
         });
 
