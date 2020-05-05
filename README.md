@@ -33,7 +33,7 @@ My first try with Android studio:man_dancing:
     ![](https://i.imgur.com/tsA2LF9.png:)
     
 # Link:point_down:
-[https://heehee812.github.io/Random-APP/](https://)
+https://heehee812.github.io/Random-APP/
 
 
 
