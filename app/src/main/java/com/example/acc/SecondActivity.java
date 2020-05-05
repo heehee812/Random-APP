@@ -18,7 +18,17 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        Bundle bundleSecond =this.getIntent().getExtras();
+
+        final TextView serviceNum = findViewById(R.id.service_number);
+        final TextView serviceUser = findViewById(R.id.service_sentence);
+        assert bundleSecond != null;
+        String name = bundleSecond.getString("name");
+        double number = bundleSecond.getDouble("number");
+
+        serviceUser.setText(name);
+        serviceNum.setText(String.valueOf(number));
+
 
         restart.setOnClickListener(new Button.OnClickListener() {
             @SuppressLint("SetTextI18n")

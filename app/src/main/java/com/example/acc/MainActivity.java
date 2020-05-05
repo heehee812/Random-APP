@@ -1,6 +1,7 @@
 package com.example.acc;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_second);
                 final TextView serviceNum = findViewById(R.id.service_number);
                 final TextView serviceUser = findViewById(R.id.service_sentence);
-                final TextView glummer = findViewById((R.id.gotnumber));
                 final Button restart = findViewById(R.id.restart);
                 userName[0] = nameInput.getText().toString().trim();
                 randomNumber[0] = number.nextInt(6) + 1;
@@ -49,6 +49,17 @@ public class MainActivity extends AppCompatActivity {
                         setContentView(R.layout.activity_main);
                     }
                 });
+                /*userName[0] = nameInput.getText().toString().trim();
+                randomNumber[0] = number.nextInt(6) + 1;
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, SecondActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("name", userName[0]);
+                bundle.putString("number", String.valueOf(randomNumber[0]));
+
+                intent.putExtras(bundle);
+
+                startActivity(intent);*/
 
             }
         });
